@@ -5,7 +5,7 @@ Les Guildes membres de l'Initiative (au 27 janvier 2018) :
 - **Le Murmure :** *Guilde pour la gérance et l’animation de la taverne du quartier Ascalonien du Promontoire Divin.*
 - **Le Pichet Sans Fond :** *Guilde pour la gérance et l’animation de la taverne du Pichet Sans Fond.*
 - **Les Lames Brillantes :** *Guilde de lame brillante, espionnage, patrouilles, infiltrations au service de la Reine Jennah et de la Kryte.*
-- **La Lôge des Brumes :** *Guilde de mage étudiant ou résolvant les anomalies magiques.*
+- **La Lôge des Brumes :** *Guilde de mages étudiant ou résolvant les anomalies magiques.*
 - **L’Ordre de Skià :** *Guilde d’occultistes, religion basée sur Abaddon, Dhuum et Menzies. Principe de mentors et d’élèves.*
 - **Les Caravaniers :** *Guildes de mercenaires itinérants passant tout type de contrats, vendeurs d’artefacts.*
 - **La Maison Sandford :** *Maison noble militaire.*
