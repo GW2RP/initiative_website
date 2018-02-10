@@ -50,9 +50,9 @@ Ce projet communautaire a pour but d’apporter de la logique et du respect.
 **5.2 :** Il faudra prendre en compte la météo du bot discord pour les évènements entre guilde pour profités des aléas du climat.
 
 ## 6. Comment gérer les métas informations ?
-**6.1 :*** Le personnage en RP ne peut savoir des informations RP que s’il les découvre en RP ou que le détenteur de l’information lui accorde ce droit de façon HRP.  
+**6.1 :** Le personnage en RP ne peut savoir des informations RP que s’il les découvre en RP ou que le détenteur de l’information lui accorde ce droit de façon HRP.  
 **6.2 :** Dans le cas de recherches d’informations le joueur doit prendre contact avec la personne prise en filature pour discuter des détails.  
-**6.3 :*** Aucune information connue HRP ne doit induire un comportement différent en RP par rapport à d’habitude.  
+**6.3 :** Aucune information connue HRP ne doit induire un comportement différent en RP par rapport à d’habitude.  
 **6.4 :** Toute information non-trouvée en RP ou non accordée HRP ne sera pas considérée.  
 **6.5 :** Les rumeurs lancées à partir de détails connus de façon HRP ne sont pas autorisée et peuvent induire des sanctions HRP.
 
