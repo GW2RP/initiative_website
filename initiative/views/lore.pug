@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  nav(aria-label="breadcrumb")
+    ul.breadcrumb
+      li.breadcrumb-item
+        a(href="/codex") Codex
+      if content
+        li.breadcrumb-item
+          a(href="/codex/lore") Lore
+        li.breadcrumb-item.active(aria-current="page")= title
+      else
+        li.breadcrumb-item.active(aria-current="page") Lore
+
+  if content
+    a(href="lore/") Retour au Lore.
+    article!= content
+  else if entries
+    p.lead Entrée disponibles dans le Codex :
+    ul
+      each entry in entries
+        li
+          a(href="/codex/lore/"+entry)= entry
+  else if error
+    p.lead= error.message
+  else
+    p.lead Aucune entrée disponible dans le Codex.

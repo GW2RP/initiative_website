@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  nav(aria-label="breadcrumb")
+    ul.breadcrumb
+      li.breadcrumb-item
+        a(href="/codex") Codex
+      if content
+        li.breadcrumb-item
+          a(href="/codex/bestiaire") Bestiaire
+        li.breadcrumb-item.active(aria-current="page")= title
+      else
+        li.breadcrumb-item.active(aria-current="page") Bestiaire
+
+  if content
+    a(href="/codex/bestiaire/") Retour au Bestiaire
+    article!= content
+  else if entries
+    p.lead Entrées disponibles dans le Codex :
+    ul
+      each entry in entries
+        li
+          a(href="/codex/bestiaire/"+entry)= entry
+  else if error
+    p.lead= error.message
+  else
+    p.lead Aucune entrée disponible dans le Codex.
