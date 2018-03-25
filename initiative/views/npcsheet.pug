@@ -1,0 +1,44 @@
+table.table
+  - let color = sheet.color || "darkgreen"
+  thead(style="color: white; background-color: "+color)
+    th= sheet.name
+    th= sheet.type
+    th
+      a(href="/codex/fiches/"+sheet._id style="color: white;") editer
+  tbody
+    if sheet.caracteristics
+      each value, caracteristic in sheet.caracteristics
+        tr
+          td= caracteristic + `: ${value.value}`
+          if value.description
+            td= value.description
+            
+    if sheet.properties
+      each value, property in sheet.properties
+        tr
+          td= property
+          td= value
+          
+    if sheet.loots && Object.keys(sheet.loots.result).length > 0
+      - let [firstLoot, ...otherLoots] = Object.keys(sheet.loots.result)
+      tr(style="background: wheat;")
+        td.text-center(rowspan=Object.keys(sheet.loots.result).length)
+          span= `Loots (1d${sheet.loots.dice})`
+          hr
+          button.btn#roll-loot(type="action" data-dice=sheet.loots.dice) Lancer
+        td
+          strong= firstLoot + " : "
+          span= sheet.loots.result[firstLoot]
+      each loot in otherLoots
+        tr(style="background: wheat;")
+          td
+            strong= loot + " : "
+            span= sheet.loots.result[loot]
+            
+    if sheet.skills
+      each skill, skillName in sheet.skills
+        tr
+          td= skillName
+          td
+            strong= `1d100+${skill.caracteristic}+${skill.value} - `
+            span= skill.description

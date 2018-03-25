@@ -12,10 +12,11 @@ nav.navbar.navbar-expand-md.navbar-dark#main-navbar
         a.nav-link(href="/charte") Charte
       li.nav-item(class=(nav_active === "nav-members") ? "active" : "" )
         a.nav-link(href="/membres") Membres
-      li.nav-item.dropdown(class=(["nav-codex", "nav-codex-lore", "nav-codex-bestiairy"].includes(nav_active)) ? "active" : "" )
+      li.nav-item.dropdown(class=(["nav-codex", "nav-codex-lore", "nav-codex-bestiairy", "nav-codex-sheets"].includes(nav_active)) ? "active" : "" )
         a.nav-link.dropdown-toggle(href="/codex" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Codex
         .dropdown-menu(aria-labelledby="navbarCodex")
           a.dropdown-item(href="/codex" class=(nav_active === "nav-codex") ? "active" : "") Codex
           .dropdown-divider
           a.dropdown-item(href="/codex/lore" class=(nav_active === "nav-codex-lore") ? "active" : "") Lore
           a.dropdown-item(href="/codex/bestiaire" class=(nav_active === "nav-codex-bestiary") ? "active" : "") Bestiaire
+          a.dropdown-item(href="/codex/fiches" class=(nav_active === "nav-codex-sheets") ? "active" : "") Fiches

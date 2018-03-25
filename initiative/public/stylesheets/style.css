@@ -1,7 +1,18 @@
+body {
+  
+}
+
 blockquote {
   color: grey;
 }
 
 #main-navbar {
   background-color: #aa0404;
+}
+
+.entry-title {
+  background-color: darkblue;
+  color: white;
+  padding: 5px;
+  border-radius: 10px;
 }

@@ -14,9 +14,18 @@ block content
 
   if content
     a(href="/codex/bestiaire/") Retour au Bestiaire
-    article!= content
+    hr
+    article
+      h1.entry-title= title
+      div!= content
+      if sheets
+        ul.list-group
+        each sheet in sheets
+          li.list-group-item
+            include npcsheet
   else if entries
     p.lead Entrées disponibles dans le Codex :
+    button.btn.btn-outline-primary#add-entry(type="action") Nouvelle entrée
     ul
       each entry in entries
         li
@@ -24,4 +33,7 @@ block content
   else if error
     p.lead= error.message
   else
-    p.lead Aucune entrée disponible dans le Codex.
+    p.lead Aucune entrée disponible dans le Bestiaire.
+    
+  script
+    include ../public/javascripts/bestiary.js
