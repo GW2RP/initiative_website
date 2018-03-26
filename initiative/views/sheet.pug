@@ -1,4 +1,26 @@
 extends layout
 
 block content
-  include npcsheet
+  nav(aria-label="breadcrumb")
+    ul.breadcrumb
+      li.breadcrumb-item
+        a(href="/codex") Codex
+      if sheet
+        li.breadcrumb-item
+          a(href="/codex/fiches") Fiches
+        li.breadcrumb-item.active(aria-current="page")= title
+      else
+        li.breadcrumb-item.active(aria-current="page") Fiches
+  
+  if sheets
+    p.lead Fiches disponibles dans le Codex :
+    a.btn.btn-outline-primary#add-entry(role="button" href="/codex/fiches/ajouter") Nouvelle entrée
+    ul
+      each sheet in sheets
+        li
+          a(href="/codex/fiches/"+sheet._id)= sheet.name
+  else if sheet
+    include npcsheet
+
+  script
+    include ../public/javascripts/sheets.js

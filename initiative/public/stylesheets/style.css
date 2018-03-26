@@ -1,5 +1,5 @@
 body {
-  
+
 }
 
 blockquote {
@@ -15,4 +15,17 @@ blockquote {
   color: white;
   padding: 5px;
   border-radius: 10px;
+}
+
+.action {
+  cursor: pointer;
+}
+
+.color-picker-palette td {
+  width: 50px;
+  height: 50px;
+}
+
+.light-placeholder::placeholder {
+  color: lightgrey;
 }

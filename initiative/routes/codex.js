@@ -49,11 +49,12 @@ router.get('/bestiaire/:entryName', function(req, res, next) {
 });
 
 router.get('/fiches', function(req, res, next) {
-  res.render('index', { title: 'Fiches', nav_active: 'nav-codex-sheets' });
+  let sheets = getSheets();
+  res.render('sheet', { title: 'Fiches', nav_active: 'nav-codex-sheets', sheets: sheets });
 });
 
 router.get('/fiches/ajouter', function(req, res, next) {
-  res.render('index', { title: 'Nouvelle fiche' });
+  res.render('new_sheet', { title: 'Nouvelle fiche', nav_active: 'nav-codex-sheets' });
 })
 
 router.get('/fiches/:npcId', function(req, res, next) {
@@ -121,6 +122,15 @@ function getSheet(npcId) {
     }
   }
   return null;
+}
+
+function getSheets() {
+  let entries = [];
+  for (let entry in npcSheets) {
+    let sheet = npcSheets[entry];
+    entries.push({ name: sheet.name, _id: sheet._id });
+  }
+  return entries;
 }
 
 ///////////////////////////////////////////

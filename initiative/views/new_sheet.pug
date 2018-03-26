@@ -1,0 +1,70 @@
+extends layout
+
+block content
+  nav(aria-label="breadcrumb")
+    ul.breadcrumb
+      li.breadcrumb-item
+        a(href="/codex") Codex
+      li.breadcrumb-item
+        a(href="/codex/fiches") Fiches
+      li.breadcrumb-item.active(aria-current="page") Nouvelle Fiche
+      
+  // Modals
+  .modal.fade.show#add-field(tabindex="-1" role="dialog")
+    .modal-dialog(role="document")
+      .modal-content
+        .modal-header
+          h5.modal-title Ajouter
+          button.close(type="button" data-dismiss="modal" aria-label="Close")
+            span(aria-hidden="true") &times;
+        .modal-body
+          p Formulaire d'ajout
+        .modal-footer
+          button.btn.btn-success(type="button") Ajouter
+          button.btn.btn-secondary(type="button" data-dismiss="modal") Annuler
+        
+  form
+    table.table#new-sheet
+      thead(style="color: white; background-color: darkgreen;")
+        tr
+          th
+            input.form-control.light-placeholder(type="text" style="border: 0; text-decoration: underline; font-weight: bold; font-style: italic; background: none; color: white;" placeholder="Nom de la créature")
+          th
+            input.form-control.light-placeholder(type="text" style="border: 0; text-decoration: underline; font-style: italic; background: none; color: white;" placeholder="Type de créature")
+          th.align-middle.text-right
+            a.action#color-picker(style="color: white" tabindex="0" role="button" data-html="true" data-placement="bottom" data-toggle="popover" data-trigger="focus" title="Changer la couleur" data-content="<a href='/'>Base</a>") Couleur
+          
+      tbody
+        tr#caracteristics-title
+          td.text-center(colspan="3" style="background-color: lightgrey;")
+            .row
+              .col-11
+                h5 Caractéristiques
+              .col-1
+                h5.action.text-success#add-caracteristic.float-right.clear(style) ajouter
+        tr#properties-title
+          td.text-center(colspan="3" style="background-color: lightgrey;")
+            .row
+              .col-11
+                h5 Propriétés
+              .col-1
+                h5.action.text-success#add-property.float-right.clear(style) ajouter
+        tr#loots-title
+          td.text-center(colspan="3" style="background-color: lightgrey;")
+            .row
+              .col-11
+                h5 Loots
+              .col-1
+                h5.action.text-success#modify-loots.float-right.clear(style) modifier
+        tr#skills-title
+          td.text-center(colspan="3" style="background-color: lightgrey;")
+            .row
+              .col-11
+                h5 Compétences
+              .col-1
+                h5.action.text-success#add-skill.float-right.clear(style) ajouter
+          
+          
+      
+  script
+    include ../public/javascripts/new_sheet.js
